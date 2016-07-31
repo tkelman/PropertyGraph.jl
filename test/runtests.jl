@@ -13,7 +13,7 @@ testfiles =["testdata",
 println("Running tests:")
 
 for t in testfiles
-    testfilepath = joinpath(Pkg.dir("PropertyGraph"),"test","$(t).jl")
+    testfilepath = joinpath(dirname(@__FILE__),"$(t).jl")
     println("running $(testfilepath) ...")
     include(testfilepath)
 end
